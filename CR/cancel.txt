@@ -1,6 +1,13 @@
 Pour annuler un commit push sur le serveur,
+
 On revient au commit précédent:
 	git reset HEAD~1
-Puis on commit/push: (sans add pour ne pas considérer les modifications locales)
+Puis on commit/push:
 	git commit -m "CANCEL"
-	git push https://github.com/Syn38/devopsTP1.git master
+	git push -force https://github.com/Syn38/devopsTP1.git master
+
+On n'utilise pas ADD sinon les modifications que l'on a annulée (qui sont présentes localement) sont commit
+On doit forcer le push car on part du commit précédent
+
+Pour oublier les modifications locales on utilise :
+	git reset --hard
