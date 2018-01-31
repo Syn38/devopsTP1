@@ -1,0 +1,56 @@
+[09:28:23]blanctaj$ git status 
+Sur la branche fork2
+Modifications qui seront validées :
+  (utilisez "git reset HEAD <fichier>..." pour désindexer)
+
+	nouveau fichier : notstaged
+	nouveau fichier : tobecommited
+
+Modifications qui ne seront pas validées :
+  (utilisez "git add <fichier>..." pour mettre à jour ce qui sera validé)
+  (utilisez "git checkout -- <fichier>..." pour annuler les modifications dans la copie de travail)
+
+	modifié :         notstaged
+
+Fichiers non suivis:
+  (utilisez "git add <fichier>..." pour inclure dans ce qui sera validé)
+
+	untracked
+
+
+=========================================================================
+Fichiers "Changes to be committed":
+	Ensemble des fichiers pris en compte lors d'un commit
+
+Fichiers "Changes not staged for commit":
+	Ensemble des fichiers suivis dans le commit mais modifiés par la suite
+	=> Fichier suivi mais pas à jour dans l'index
+
+Fichiers "Untracked Files":
+	Fichiers non suivis par le commit
+=========================================================================
+
+Faire suivre un fichier :
+	git add fichier
+
+Etre suivi mais pas à jour:
+	git add fichier
+	echo "contenu" > fichier
+
+Ne pas être suivi:
+	NOTHING TO DO
+
+Un fichier peut apparaitre dans 2 catégories (cf: Output)
+Un fichier est suivi par l'index avec une modification antérieure puis modifié et donc non suivi
+Exemple:
+	touch fichier
+	echo "contenu1" > fichier
+	git add fichier
+
+	=> Le fichier est dans "Changes to be committed"
+
+	echo "contenu2" > fichier
+
+	=> Le fichier est aussi dans "Changes not staged for the commit"
+
+Dans l'index fichier contient "contenu1" mais localement fichier contient "contenu2"
