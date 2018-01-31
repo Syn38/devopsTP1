@@ -1,0 +1,18 @@
+étape 2 :	git init
+
+étape 3 :	git add authors
+			git commit -m "Message"
+
+étape 4 :	git push https://github.com/Syn38/devopsTP1.git
+			
+	FAIL	fatal: La branche courante master n'a pas de branche amont.
+			Pour pousser la branche courante et définir la distante comme amont, utilisez
+
+			    git push --set-upstream https://github.com/Syn38/devopsTP1.git master
+
+	CORR	git push https://github.com/Syn38/devopsTP1.git master
+			
+			Branche master vide sur le dépôt serveur -> pas besoin de pull.
+			Le premier commit est push en tête de la branche master
+
+étape 6 :	
