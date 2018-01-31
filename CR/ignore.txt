@@ -1,0 +1,9 @@
+étape 13 : 		echo "*.pdf
+					tmp/" > .gitignore
+
+				mkdir tmp
+				touch tmp/ignoredfile.txt
+
+Lorsqu'on add tous les fichiers du repo:
+	git add .
+On observe que le fichiers tmp/ignoredfile.txt n'est pas ajouté à l'index
