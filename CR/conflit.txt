@@ -1,0 +1,6 @@
+Pour créer un conflit entre deux branches nous avons crée un fichier conflit/confile.txt
+Dans ce fichier chaque branche a écrit son nom.
+
+Lorsqu'on essaye de merge les deux branches on obtient un conflit car le fichier contient deux contenus différents à un même endroit (la première ligne).
+
+Nous avons conservé l'aide proposée par git pour résoudre le conflit comme contenu final (contenu du fichier "corrigé") puis il suffit d'add et push pour résoudre le conflit.
