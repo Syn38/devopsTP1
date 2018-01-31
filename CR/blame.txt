@@ -1,0 +1,18 @@
+La commande 
+	git blame -e monfichier
+
+permet de détailler pour chaque ligne:
+	le commit 
+	l'utilisateur
+	la date
+	le numero de ligne
+	le contenu
+ayant dernièrement modifié cette ligne.
+
+[11:09:33]blanctaj$ git blame -e CR/conflit.txt
+51dba5f3 (<mail@singe.com> 2018-01-31 10:52:26 +0100 1) Pour créer un conflit entre deux branches nous avons crée un fichier conflit/confile.txt
+51dba5f3 (<mail@singe.com> 2018-01-31 10:52:26 +0100 2) Dans ce fichier chaque branche a écrit son nom.
+51dba5f3 (<mail@singe.com> 2018-01-31 10:52:26 +0100 3) 
+51dba5f3 (<mail@singe.com> 2018-01-31 10:52:26 +0100 4) Lorsqu'on essaye de merge les deux branches on obtient un conflit car le fichier contient deux contenus différents à un même endroit (la première ligne).
+51dba5f3 (<mail@singe.com> 2018-01-31 10:52:26 +0100 5) 
+51dba5f3 (<mail@singe.com> 2018-01-31 10:52:26 +0100 6) Nous avons conservé l'aide proposée par git pour résoudre le conflit comme contenu final (contenu du fichier "corrigé") puis il suffit d'add et push pour résoudre le conflit.
