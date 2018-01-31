@@ -1,0 +1,34 @@
+étape 11 : 		git checkout fork2
+				git rebase master
+				git checkout master
+				git pull --rebase https://github.com/Syn38/devopsTP1.git
+
+Le rebase place la branch fille (fork2) à la suite de la branch mère (master)
+Les deux branches ne forment plus qu'une et la branche mère est "en retard" par rapport à la fille
+
+*----*----* master
+      \
+       *----* fork2
+
+devient
+
+             fork2
+               v
+*----*----*----*
+          ^
+        master
+
+Pour que master se mette à jour il suffit de pull --rebase pour indiquer à master de se mettre à sur les commits poussés.
+
+C'est ce qu'on appelle le fast-forward, le fait d'avancer sur la branche pour récupérer les commits poussés par dessus la tête d'une branche (ici fork2 est en avance sur master donc master doit fast forward).
+
+On obtient:
+
+             fork2
+               v
+*----*----*----*
+               ^
+             master
+
+Pour supprimer la branche fork2 (devenue inutile) on utilise:
+	git branch -d mabranche
