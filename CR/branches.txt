@@ -1,0 +1,15 @@
+1)		étape 6 :
+			git checkout -b fork1
+			git add branchtest
+			git commit -m "Message"
+			git push https://github.com/Syn38/devopsTP1.git fork1
+
+2)			[08:53:51]blanctaj$ git branch
+			  fork1
+			* master
+
+3)			Une astérisque se trouve devant le nom de la branche courante
+
+4)			git checkout mabranche
+
+5)			Aucune différence dans le répertoire de travail lorsque l'on change de branche
