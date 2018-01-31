@@ -11,3 +11,6 @@ On doit forcer le push car on part du commit précédent
 
 Pour oublier les modifications locales on utilise :
 	git reset --hard
+
+Pour restaurer un fichier modifié localement on utilise:
+	git checkout -- monfichier
